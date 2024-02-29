@@ -1,0 +1,24 @@
+.modal-overlay-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    display: flex;
+    justify-content: center; /* Centraliza a modal horizontalmente */
+    align-items: center; /* Centraliza a modal verticalmente */
+  }
+  
+  .modal-edit {
+    width: 600px; /* Largura da modal */
+    height: 600px; /* Altura da modal */
+    background-color: white;
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  /* .modal-content { */
+    /* Estilos adicionais para o conteúdo da modal */
+  /* } */

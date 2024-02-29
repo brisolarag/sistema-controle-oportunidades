@@ -1,0 +1,45 @@
+services:
+  api-opports:
+    container_name: api-opports
+    build: 
+      context: api-opportunities
+      dockerfile: Dockerfile
+    ports:
+      - 4652:8080
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on: ["opports-sql"]
+    networks:
+      opports-networks:
+  
+  opports-sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "MSSQL_SA_PASSWORD=SenhaBancoTeste123"
+    volumes:
+      - "opports-volume:/var/opt/mssql"
+    networks:
+      opports-networks:
+        aliases:
+          - "sql"
+  
+  opports-front-end:
+    container_name: opports-front
+    build: 
+      context: react-opportunities-form
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on: ["api-opports"]
+    networks:
+      opports-networks:
+    
+
+
+volumes:
+  opports-volume:
+networks:
+  opports-networks:
+    driver: bridge
+    

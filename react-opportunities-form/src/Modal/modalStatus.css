@@ -1,0 +1,60 @@
+.modal-overlay-status {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    display: flex;
+    justify-content: center; /* Centraliza a modal horizontalmente */
+    align-items: center; /* Centraliza a modal verticalmente */
+  }
+  
+  .modal-status {
+    width: 350px; /* Largura da modal */
+    height: 350px; /* Altura da modal */
+    background-color: #3b3b3b;
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaçamento interno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+  }
+  
+  .modal-status h3 {
+    position: absolute;
+    top: 0;
+  }
+  .modal-status p {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+  }
+
+.modal-status-content {
+    text-align: center;
+    width: 80%;
+    height: 60%;
+    position: relative;
+}
+.modal-status-radios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.modal-status-radios div{
+    display: flex;
+    justify-content: start;
+}
+
+.modal-status-content button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
